@@ -1,0 +1,91 @@
+% Preamble
+	\documentclass[11pt,a4paper,openany]{book}
+	% Packages
+	\usepackage[utf8]{inputenc}
+	\usepackage[T1]{fontenc}
+	\usepackage{amsmath}
+	\usepackage{amssymb}
+	\usepackage{graphicx}
+	\usepackage[spanish]{babel}
+	\usepackage{xcolor}
+		\definecolor{Azul}{rgb}{0.17, 0.4, 0.69}
+		\definecolor{charcoal}{rgb}{0.21, 0.27, 0.31}
+	\usepackage{varioref}
+	\usepackage[left= 2.54cm, right=2.54cm, top=2.54cm, bottom=2.54cm]{geometry}
+	\usepackage{setspace}
+	\usepackage{lipsum}
+	\usepackage{caption}
+	\usepackage{float}
+	\usepackage{booktabs}
+	\usepackage{multirow}
+	\usepackage{hyperref}
+	\usepackage{times} % Time New Roman
+	\usepackage{listings} % Program code
+	% Customize
+		% Line spread 
+		\linespread{1.5}
+		% Path for images
+		\graphicspath{{Images/}}
+		% Table 
+		\captionsetup[table]{
+			name = Tabla,
+			labelsep = newline,
+			justification = raggedright,
+			singlelinecheck = false,
+			labelfont = bf
+		}
+		% Program code
+		\definecolor{codegreen}{rgb}{0,0.6,0}
+		\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+		\definecolor{codepurple}{rgb}{0.58,0,0.82}
+		\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+		\lstdefinestyle{mystyle}{
+			backgroundcolor=\color{backcolour},   
+			commentstyle=\color{codegreen},
+			keywordstyle=\color{magenta},
+			numberstyle=\tiny\color{codegray},
+			stringstyle=\color{codepurple},
+			identifierstyle=\color{blue},
+			basicstyle=\ttfamily\footnotesize,
+			breakatwhitespace=false,         
+			breaklines=true,                 
+			captionpos=b,                    
+			keepspaces=true,
+			numbers=left,                    
+			numbersep=5pt,                  
+			showspaces=false,                
+			showstringspaces=false,
+			showtabs=false,                  
+			tabsize=2
+		}
+		\lstset{style=mystyle}
+% Document
+	\begin{document}
+		% FrontMatter
+		% Beginning ----------------------------------------------
+			\frontmatter
+			% Cover
+				\include{Cover/Cover}
+			% Table of contents
+				\tableofcontents
+		% MainMatter
+		% Center -------------------------------------------------	
+			\mainmatter
+			% Chapter 1: Descripción del proyecto
+				\include{Chapters/Introduction}
+			% Chapter 2: Diagrama Entidad Relación (DER)
+				\include{Chapters/Chapter2}
+			% Chapter 3: Programa SQL 
+				\include{Chapters/Chapter3}
+			% Chapter 4: Diagrama SQL
+				\include{Chapters/Chapter4}	
+		% BackMatter
+	    % End ----------------------------------------------------
+	    	\backmatter
+	
+			% Bibliography
+			
+			% Apendice
+		
+	\end{document}
+
